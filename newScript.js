@@ -1,6 +1,6 @@
 (async function () {
 	const { colors } = await fetch(
-		'http://random-flat-colors.vercel.app/api/random?count=6'
+		'https://random-flat-colors.vercel.app/api/random?count=6'
 	).then((res) => res.json());
 
 	const leftColors = document.querySelector('.left-colors');
