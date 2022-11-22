@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creatives</title>
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+    <header class="headbar">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </header>
+    <div class="container">
+        <div class="left-section">
+            <form class="form" onsubmit="handleSubmit()">
+                <h2 class="filter">Filter By</h2>
+                <div class="filter-section">
+                    <div class="colors">
+                        <label class="label" for="colors">Colors:</label><br />
+                        <div class="left-colors">
+
+                        </div>
+                    </div>
+                    <div class="search">
+                        <label for="search-bar">title/subtitle:</label><br />
+                        <input type="search" id="search-bar" class="searchBar"
+                            placeholder="Search across title and subtitle" />
+                    </div>
+                </div>
+            </form>
+            <!-- <div class="range-bar">
+                <input type="range" min="1" max="5" value="1" class="range" disabled/>
+                <p class="ranges">0/5</p>
+            </div> -->
+
+            <div class="progress-container">
+                <div class="progress-back">
+                    <div class="progress-bar"></div>
+                </div>
+                <h3 class="progress"> 0/5 Creatives</h3>
+            </div>
+
+            <!-- <p class="progress">0/5</p> -->
+            <div class="btn">
+                <button class="add-creation">+ Add Creation</button>
+            </div>
+            <div class="resultDiv"></div>
+        </div>
+        <div class="modal hidden">
+            <header class="modal-header">
+                <h1 class="title">Creative Creation</h1>
+                <button class="close">X</button>
+            </header>
+            <form class="add-form">
+                <label for="title">title</label>
+                <input type="text" name="title" id="title" class="title w3-input" required /><br />
+                <label for="subtitle">subtitle</label>
+                <input type="text" name="subtitle" id="subtitle" class="subtitle w3-input" required />
+                <div class="modal-colors">
+                    <label class="color-label" for="colors2">Background Color:</label><br />
+                    <div class="right-colors color-buttons " id="colors2">
+
+                    </div>
+                </div>
+                <button class="done" disabled>Done</button>
+            </form>
+        </div>
+
+    </div>
+    <script src="./newScript.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    /* padding: 1rem; */
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+
+}
+
+body {
+    margin: 1rem;
+    min-height: 100%;
+    background: bisque;
+
+}
+
+.headbar{
+    display: flex;
+    justify-items: left;
+    background: #fff;
+    padding: 1rem;
+    border: 2px solid #000;
+    border-radius: 10px 10px 0 0;
+}
+
+.circle{
+    width: 1rem;
+    height: 1rem;
+    border: 4px solid #444;
+    margin: 0 0.5rem;
+    border-radius: 50%;
+}
+
+.container{
+    min-width: 95%;
+    height: 85vh !important;
+    margin: 0 auto;
+    border: 2px solid #000;
+    background: #fff;
+    border-radius: 0 0 10px 10px;
+    display: flex;
+} 
+
+
+
+.left-section{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 84.8vh;
+    overflow-y: scroll;
+    padding: 2rem;
+    margin: 0 10px;
+}
+
+
+
+
+/* width */
+.left-section::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 10px;
+  }
+
+
+  /* Track */
+  .left-section::-webkit-scrollbar-track {
+    background: transparent;
+  }
+   
+  /* Handle */
+  .left-section::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  .left-section::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+.border{
+    border-right: 2px solid #000;
+}
+
+.filter{
+    font-size: 2rem;
+}
+
+.filter-section{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.colors {
+    padding: 1rem 0.2rem;
+}
+.colors .label {
+    font-size: 2rem;
+    color: blue;
+}
+
+
+/* colors checkbox buttons */
+input[type="checkbox"]{
+    padding: 10px;
+    width: 2rem;
+    height: 2rem;
+    margin-right: 10px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    transition: 200ms ease-in-out;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:hover{
+    /* border-radius: 50%; */
+    border: 3px solid #123;
+    transform: scale(1.2);
+}
+
+input[type="checkbox"]:checked{
+    border-radius: 50%;
+    border: 3px solid black;
+    transform: scale(1.2);
+}
+
+
+/* colors radio buttons */
+input[type="radio"]{
+    padding: 10px;
+    width: 2rem;
+    height: 2rem;
+    margin-right: 10px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    transition: 200ms ease-in-out;
+    cursor: pointer;
+}
+
+input[type="radio"]:hover{
+    /* border-radius: 50%; */
+    border: 3px solid gray;
+    transform: scale(1.2);
+}
+
+input[type="radio"]:checked{
+    border-radius: 50%;
+    border: 3px solid black;
+    transform: scale(1.2);
+}
+
+#search-bar{
+    height: 35px;
+    padding: .5rem 1rem;
+    border:2px solid grey;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+#search-bar:hover{
+    border:2px solid black;
+}
+
+
+
+.filter-section .range-bar {
+    width: 100%;
+    display:flex;
+    gap: 1rem;
+}
+
+.ranges{
+    display: inline;
+}
+
+.progress-container {
+    display: flex;
+    max-width: 40rem;
+}
+.progress-back{
+    width: 75%;
+    height: 10px;
+    margin: auto;
+    background-color: rgb(211, 209, 209);
+    border-radius: 10px;
+}
+.progress-bar{
+    width: 0%;
+    height: 10px;
+    background-color: black;
+    border-radius: 10px;
+    transition: 200ms ease-out;
+}
+
+
+
+.btn{
+    padding: .3rem .5rem;
+}
+
+.delete{
+    margin-left: 95%;
+    font-size: large;
+    font-weight: bold;
+}
+
+.add-creation {
+    border: 2px solid #888;
+    border-radius: 10px;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    font-weight: 700;  
+    transition: 200ms ease-in-out;
+}
+.add-creation:hover {
+    border: 2px solid #000;
+}
+.add-creation:disabled{
+    border: 2px solid #777;
+}
+
+/* Results Div */
+
+.colorDiv{
+    max-width:500px ;
+    padding: 0.5rem 2rem;
+    margin: 1rem 1rem;
+    border: 2px solid #000;
+    text-align: center;
+}
+
+
+
+.modal{
+    position:fixed;
+    top:15%;
+    left:65%;
+    width: 35%;
+}
+
+.modal-header{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    padding-bottom: 0;
+    font-size: 1rem;
+}
+
+.close {
+    font-size: 2rem;
+    border: none;
+    font-weight: 700;
+    border: 2px solid transparent;
+    background: white;
+    cursor: pointer;
+}
+.close:hover {
+    border: 2px solid black;
+}
+
+.set-width{
+    width: 64% !important;
+}
+
+.add-form{
+    margin-left: 4rem;
+}
+
+.add-form .color-label {
+    display: block;
+    margin-bottom: -10px;
+}
+
+.add-form  input[type="text"]{
+    display: block;
+    height: 35px;
+    width: 60%;
+    place-content: center;
+    border: 2px solid grey;
+    border-radius: 1px;
+    color: #000;
+    font-size: 1.2rem;
+    font-weight: bold;
+
+}
+
+.add-form  input[type="text"]:hover{
+    border: 2px solid black;
+}
+
+.w3-input {
+    padding: 8px !important;
+    display: block !important;
+    border: none !important;
+    border-bottom: 1px solid #111 !important;
+    width: 60% !important;
+    border-radius: 1px !important;
+
+}
+.modal-colors{
+    margin-top: 2rem;
+}
+
+
+
+.done {
+    margin-top: 2rem;
+    border: 2px solid #888;
+    border-radius: 10px;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    font-weight: 700;  
+    transition: 300ms ease-in-out;
+}
+.done:hover {
+    border: 2px solid #000;
+    font-weight: 700;  
+}
+
+.done:hover:disabled {
+    border: 2px solid #888;
+    font-weight: 700;  
+}
+
+
+.hidden{
+    display: none;
+}
+
+
+
